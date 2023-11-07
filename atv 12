@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int quantidadeNotas;
+
+    printf("Digite a quantidade de notas: ");
+    scanf("%d", &quantidadeNotas);
+
+    if (quantidadeNotas <= 0) {
+        printf("A quantidade de notas deve ser maior que zero.\n");
+        return 1; // Saída de erro
+    }
+
+    double total = 0;
+
+    for (int i = 1; i <= quantidadeNotas; i++) {
+        double nota;
+        printf("Digite a nota %d: ", i);
+        scanf("%lf", &nota);
+
+        total += nota;
+    }
+
+    double media = total / quantidadeNotas;
+    printf("A média das %d notas é: %.2lf\n", quantidadeNotas, media);
+
+    return 0;
+}
+Neste programa, o usuário primeiro digita a quantidade de notas a serem inseridas. Em seguida, o programa utiliza um loop for para repetir a solicitação das notas de acordo com a quantidade especificada. As notas são somadas ao total, e depois é calculada a média dividindo o total pelo número de notas. O resultado é exibido na tela. Certifique-se de incluir as bibliotecas apropriadas, como <stdio.h>, no seu ambiente de desenvolvimento C para compilar e executar o programa.
+
+
+
+
+
