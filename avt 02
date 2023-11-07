@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    float valorCompra;
+    char diaSemana;
+
+    printf("Informe o valor da compra em reais: ");
+    scanf("%f", &valorCompra);
+
+    printf("Informe o dia da semana (D para dia de semana, F para fim de semana): ");
+    scanf(" %c", &diaSemana);
+
+    float desconto = 0.0;
+
+    if (valorCompra > 100.0) {
+        if (diaSemana == 'D' || diaSemana == 'd') {
+            desconto = valorCompra * 0.10;
+        } else if (diaSemana == 'F' || diaSemana == 'f') {
+            desconto = valorCompra * 0.15;
+        }
+    }
+
+    printf("O valor do desconto é: R$ %.2f\n", desconto);
+    float valorFinal = valorCompra - desconto;
+    printf("O valor final da compra é: R$ %.2f\n", valorFinal);
+
+    return 0;
+}
